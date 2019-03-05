@@ -4,8 +4,8 @@ $(document).ready(function () {
         onkeyup: false,
         onclick: false,
         rules: {
-            "name":{
-                required : true,
+            "name": {
+                required: true,
 
             },
             "username": {
@@ -22,7 +22,13 @@ $(document).ready(function () {
 
             },
             "bday": {
-                required :true,
+                required: true,
+            },
+            "sex": {
+                required: true,
+            },
+            "idUser": {
+                required: true,
             }
         },
         messages: {
@@ -41,7 +47,13 @@ $(document).ready(function () {
             "re-password": {
                 equalTo: "Hai password phải giống nhau",
                 minlength: "Hãy nhập ít nhất 8 ký tự"
-            }
+            },
+            "idUser": {
+                required: "Bắt buộc nhập idUser"
+            },
+            "sex": {
+                required: "true",
+            },
         }
     });
 });
