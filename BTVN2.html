@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BTVN2</title>
+    <link rel="stylesheet" href="css/bootstrap-3.3.7.min.css">
+    <link rel="stylesheet" href="css/btvn2.css">
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/bootstrap-datepicker-1.8.0.js"></script>
+    <script src="js/btvn2.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Đăng ký tài khoản</h2>
+        <form class="form-horizontal" action="" method="post">
+            <div class="form-group">
+                <label class="control-label col-lg-2" for="name">Họ và Tên(*):</label>
+                <div class="col-lg-6">
+                    <input type="text" class="form-control" id="name" name="name" 
+                    required oninvalid="this.setCustomValidity('Họ và Tên không được để trống')" oninput="this.setCustomValidity('')">
+                </div>
+                <span class="control-label col-lg-4" id="name_error_message"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-lg-2" for="username">Tên đăng nhập(*):</label>
+                <div class="col-lg-6">          
+                    <input type="text" class="form-control" id="username" name="username"
+                    required oninvalid="this.setCustomValidity('Tên đăng nhập không được để trống')" oninput="this.setCustomValidity('')">
+                </div>
+                <span class="control-label col-lg-4" id="username_error_message"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-lg-2" for="username">Mật khẩu(*):</label>
+                <div class="col-lg-6">          
+                    <input type="password" class="form-control" id="password" name="password"
+                    required oninvalid="this.setCustomValidity('Mật khẩu không được để trống')" oninput="this.setCustomValidity('')">
+                </div>
+                <span class="control-label col-lg-4" id="password_error_message"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-lg-2" for="username">Xác nhận mật khẩu(*):</label>
+                <div class="col-lg-6">          
+                    <input type="password" class="form-control" id="repassword" name="repassword"
+                    required oninvalid="this.setCustomValidity('Mật khẩu không được để trống')" oninput="this.setCustomValidity('')">
+                </div>
+                <span class="control-label col-lg-4" id="repassword_error_message"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-lg-2" for="email">Thư điện tử(*):</label>
+                <div class="col-lg-6">          
+                    <input type="text" class="form-control" id="email" name="email"
+                    required oninvalid="this.setCustomValidity('Email không được để trống')" oninput="this.setCustomValidity('')">
+                </div>
+                <span class="control-label control-label col-lg-4" id="email_error_message"></span>
+            </div>
+
+            <span class="title-infor">Thông tin cá nhân</span><br>
+            <div class="form-group">
+                <label class="control-label col-lg-2" for="dateOfBirth">Ngày sinh(*):</label>
+                <div class="col-lg-6">                 
+                    <div class="input-group date" data-date-format="dd.mm.yyyy">
+                        <input id="input-date-dob" name="test" type="text" class="form-control" required>
+                        <div class="input-group-addon" >
+                            <label for="input-date-dob" class="glyphicon glyphicon-th" id="date-dob"></label>
+                        </div>
+                    </div>                   
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-lg-2" for="sex">Giới tính(*):</label>
+                <div class="col-lg-6">          
+                    <label class="radio-inline"><input type="radio" name="optradio" value="man">Nam</label>
+                    <label class="radio-inline"><input type="radio" name="optradio" value="woman">Nữ</label>
+                </div>
+                <span class="control-label col-lg-4" id="sex_error_message"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-lg-2" for="idUser">Số CMTND(*):</label>
+                <div class="col-lg-6">          
+                    <input type="number" class="form-control" id="idUser" name="idUser"
+                    required oninvalid="this.setCustomValidity('Số CMTND không được để trống')" oninput="this.setCustomValidity('')">
+                </div>
+                <span class="control-label col-lg-4" id="idUser_error_message"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-lg-2" for="addressIdUser">Nơi cấp CMTND(*):</label>
+                <div class="col-lg-6">          
+                    <select class="form-control" id="addressIdUser">
+                        <option>Hà Nội</option>
+                        <option>Hải Dương</option>
+                        <option>Thanh Hóa</option>
+                        <option>Huế</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-lg-2" for="dateOfIdUser">Ngày cấp CMTND(*):</label>
+                <div class="col-lg-6">                 
+                    <div class="input-group date" data-date-format="dd.mm.yyyy">
+                        <input id="input-date-idUser" name="test" type="text" class="form-control" required>
+                        <div class="input-group-addon" >
+                            <label for="input-date-idUser" class="glyphicon glyphicon-th" id="date-idUser"></label>
+                        </div>
+                    </div>                   
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-lg-2" for="addressUser">Địa chỉ thường trú(*):</label>
+                <div class="col-lg-6">          
+                    <input type="text" class="form-control" id="addressUser" name="addressUser"
+                    required oninvalid="this.setCustomValidity('Địa chỉ thường trú không được để trống')" oninput="this.setCustomValidity('')">
+                </div>
+                <span class="control-label col-lg-4" id="addressUser_error_message"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-lg-2" for="nowAddressUser">Nơi ở hiện tại(*):</label>
+                <div class="col-lg-6">          
+                    <input type="text" class="form-control" id="nowAddressUser" name="nowAddressUser"
+                    required oninvalid="this.setCustomValidity('Nơi ở hiện tại không được để trống')" oninput="this.setCustomValidity('')">
+                </div>
+                <span class="control-label col-lg-4" id="nowAddressUser_error_message"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-lg-2" for="addressIdUser">Dân tộc(*):</label>
+                <div class="col-lg-6">          
+                    <select class="form-control" id="addressIdUser">
+                        <option>Kinh</option>
+                        <option>Tày</option>
+                        <option>Mông</option>
+                        <option>Dao</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-lg-2" for="phoneUser">Điện thoại:</label>
+                <div class="col-lg-6">          
+                    <input type="number" class="form-control" id="phoneUser" name="phoneUser"
+                    required oninvalid="this.setCustomValidity('Điện thoại không được để trống')" oninput="this.setCustomValidity('')">
+                </div>
+                <span class="control-label col-lg-4" id="phoneUser_error_message"></span>
+            </div>
+
+            <span class="title-infor">Các thông tin khác</span>
+            <div class="form-group">
+                <label class="control-label col-lg-2" for="nameCompany">Tên công ty:</label>
+                <div class="col-lg-6">          
+                    <input type="text" class="form-control" id="nameCompany" name="nameCompany"
+                    required oninvalid="this.setCustomValidity('Tên công ty không được để trống')" oninput="this.setCustomValidity('')">
+                </div>
+                <span class="control-label col-lg-4" id="nameCompany_error_message"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-lg-2" for="addressCompany">Địa chỉ công ty:</label>
+                <div class="col-lg-6">          
+                    <input type="text" class="form-control" id="addressCompany" name="addressCompany"
+                    required oninvalid="this.setCustomValidity('Địa chỉ công ty không được để trống')" oninput="this.setCustomValidity('')">
+                </div>
+                <span class="control-label col-lg-4" id="addressCompany_error_message"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-lg-2" for="phoneCompany">Điện thoại công ty:</label>
+                <div class="col-lg-6">          
+                    <input type="number" class="form-control" id="phoneCompany" name="phoneCompany"
+                    required oninvalid="this.setCustomValidity('Điện thoại công ty không được để trống')" oninput="this.setCustomValidity('')">
+                </div>
+                <span class="control-label col-lg-4" id="phoneCompany_error_message"></span>
+            </div>
+
+            <div class="form-group">        
+                <div class="col-lg-offset-2 col-lg-6">
+                    <button class="btn btn-default" id="btn-register" onclick="register()">Đăng ký tài khoản</button>
+                </div>
+            </div>/
+        </form>
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function(){
+             $('#input-date-dob').datepicker({format: "dd.mm.yyyy"}); 
+                $('#date-dob').click(function(){
+                    $('#input-date-dob').datepicker({format: "dd.mm.yyyy"}); 
+            });
+            $('#input-date-idUser').datepicker({format: "dd.mm.yyyy"}); 
+                $('#date-idUser').click(function(){
+                    $('#input-date-idUser').datepicker({format: "dd.mm.yyyy"}); 
+            });
+        })       
+    </script>    
+</body>
+</html>
